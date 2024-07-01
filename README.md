@@ -56,6 +56,7 @@ Distributed under the MIT License. See `LICENSE` file for more information.
 Project Link: [https://github.com/yourusername/cyberpunk-matrix-visualizer](https://github.com/yourusername/cyberpunk-matrix-visualizer)
 
 ## Acknowledgements
+- [Claude](https://claude.ai/)
 - [React](https://reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Create React App](https://create-react-app.dev/)
