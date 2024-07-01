@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.279d25ec.css",
-    "main.js": "/static/js/main.c54c0c4d.js",
-    "index.html": "/index.html",
-    "main.279d25ec.css.map": "/static/css/main.279d25ec.css.map",
-    "main.c54c0c4d.js.map": "/static/js/main.c54c0c4d.js.map"
+    "main.css": "/symmetric-matrix-visualizer/static/css/main.279d25ec.css",
+    "main.js": "/symmetric-matrix-visualizer/static/js/main.c54c0c4d.js",
+    "index.html": "/symmetric-matrix-visualizer/index.html",
+    "main.279d25ec.css.map": "/symmetric-matrix-visualizer/static/css/main.279d25ec.css.map",
+    "main.c54c0c4d.js.map": "/symmetric-matrix-visualizer/static/js/main.c54c0c4d.js.map"
   },
   "entrypoints": [
     "static/css/main.279d25ec.css",
