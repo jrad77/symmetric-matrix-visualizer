@@ -37,49 +37,51 @@ const CyberpunkMatrixVisualizer = () => {
   };
 
   return (
-    <Card className="w-full max-w-3xl mx-auto p-6 bg-gray-900 shadow-2xl rounded-xl border-2 border-cyan-400">
-      <CardHeader className="pb-4">
-        <CardTitle className="text-3xl font-bold text-center text-cyan-400 font-mono" style={{textShadow: '0 0 10px #22d3ee'}}>
-          Cyberpunk Matrix Visualizer
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="mb-6">
-          <label htmlFor="matrixSize" className="block mb-2 text-sm font-medium text-cyan-300 font-mono">Matrix Size: {matrixSize}x{matrixSize}</label>
-          <Slider
-            id="matrixSize"
-            min={1}
-            max={10}
-            step={1}
-            value={[matrixSize]}
-            onValueChange={handleSizeChange}
-            className="w-full"
-          />
-        </div>
-        <Button onClick={generateRandomMatrix} className="w-full mb-6 bg-fuchsia-700 hover:bg-fuchsia-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 font-mono" style={{boxShadow: '0 0 10px #d946ef'}}>
-          Generate Random Matrix
-        </Button>
-        <div className="grid gap-2" style={{ gridTemplateColumns: `repeat(${matrixSize}, minmax(0, 1fr))` }}>
-          {matrix.map((row, i) => 
-            row.map((cell, j) => (
-              <Input
-                key={`${i}-${j}`}
-                type="number"
-                value={cell}
-                onChange={(e) => handleCellChange(i, j, e.target.value)}
-                style={getCellStyle(i, j)}
-                className="w-full text-center font-medium rounded-md border border-cyan-700 focus:border-cyan-500 focus:ring focus:ring-cyan-500 focus:ring-opacity-50 transition duration-300 ease-in-out font-mono"
-              />
-            ))
-          )}
-        </div>
-        <div className="mt-6 text-sm text-cyan-300 font-mono">
-          <p><span className="inline-block w-3 h-3 mr-2" style={{backgroundColor: '#2e1065'}}></span> Diagonal (Variance)</p>
-          <p><span className="inline-block w-3 h-3 mr-2" style={{backgroundColor: '#042f2e'}}></span> Upper Triangle</p>
-          <p><span className="inline-block w-3 h-3 mr-2" style={{backgroundColor: '#3f0f1f'}}></span> Lower Triangle</p>
-        </div>
-      </CardContent>
-    </Card>
+    <div className="flex justify-center items-center min-h-screen bg-gray-900 p-4">
+      <Card className="w-full max-w-4xl bg-gray-800 shadow-2xl rounded-xl border-2 border-cyan-400">
+        <CardHeader className="p-6">
+          <CardTitle className="text-4xl font-bold text-center text-cyan-400 font-mono" style={{textShadow: '0 0 10px #22d3ee'}}>
+            Symmetric Matrix Visualizer 1000000
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="p-6">
+          <div className="mb-6">
+            <label htmlFor="matrixSize" className="block mb-2 text-lg font-medium text-cyan-300 font-mono">Matrix Size: {matrixSize}x{matrixSize}</label>
+            <Slider
+              id="matrixSize"
+              min={1}
+              max={10}
+              step={1}
+              value={[matrixSize]}
+              onValueChange={handleSizeChange}
+              className="w-full"
+            />
+          </div>
+          <Button onClick={generateRandomMatrix} className="w-full mb-6 bg-fuchsia-700 hover:bg-fuchsia-600 text-white font-semibold py-3 px-4 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 font-mono text-lg" style={{boxShadow: '0 0 15px #d946ef'}}>
+            Generate Random Matrix
+          </Button>
+          <div className="grid gap-4" style={{ gridTemplateColumns: `repeat(${matrixSize}, minmax(0, 1fr))` }}>
+            {matrix.map((row, i) => 
+              row.map((cell, j) => (
+                <Input
+                  key={`${i}-${j}`}
+                  type="number"
+                  value={cell}
+                  onChange={(e) => handleCellChange(i, j, e.target.value)}
+                  style={getCellStyle(i, j)}
+                  className="w-full text-center font-medium rounded-md border border-cyan-700 focus:border-cyan-500 focus:ring focus:ring-cyan-500 focus:ring-opacity-50 transition duration-300 ease-in-out font-mono text-lg p-2"
+                />
+              ))
+            )}
+          </div>
+          <div className="mt-6 text-lg text-cyan-300 font-mono grid grid-cols-3 gap-4">
+            <div><span className="inline-block w-4 h-4 mr-2" style={{backgroundColor: '#2e1065'}}></span> Diagonal (Variance)</div>
+            <div><span className="inline-block w-4 h-4 mr-2" style={{backgroundColor: '#042f2e'}}></span> Upper Triangle</div>
+            <div><span className="inline-block w-4 h-4 mr-2" style={{backgroundColor: '#3f0f1f'}}></span> Lower Triangle</div>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
   );
 };
 

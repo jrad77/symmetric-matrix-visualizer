@@ -41,7 +41,7 @@ const CyberpunkMatrixVisualizer = () => {
       <Card className="w-full max-w-4xl bg-gray-800 shadow-2xl rounded-xl border-2 border-cyan-400">
         <CardHeader className="p-6">
           <CardTitle className="text-4xl font-bold text-center text-cyan-400 font-mono" style={{textShadow: '0 0 10px #22d3ee'}}>
-            Cyberpunk Matrix Visualizer
+            Symmetric Matrix Visualizer
           </CardTitle>
         </CardHeader>
         <CardContent className="p-6">
