@@ -1,5 +1,5 @@
 import React from 'react';
-import CyberpunkMatrixVisualizer from './components/CyberpunkMatrixVisualizer';
+import CyberpunkMatrixVisualizer from './components/cyberpunkmatrixvisualizer';
 import './App.css';
 
 function App() {
